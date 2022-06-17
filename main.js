@@ -11,9 +11,11 @@ EMPTY_HEART.addEventListener("click", (e) =>{
   })
   .catch((error) => {
     const div = document.getElementById("modal")
-    div.classList.remove("modal")
+    div.classList.remove("hidden")
     getElementById("modal-message").textContent = error.message
-
+    setTimeout(function(){
+    div.classList.add("hidden")
+    }, 3000)
   })
 })
 
