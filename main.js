@@ -4,7 +4,18 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
+EMPTY_HEART.addEventListener("click", (e) =>{
+  mimicServerCall().then((object) =>
+  {
+    
+  })
+  .catch((error) => {
+    const div = document.getElementById("modal")
+    div.classList.remove("modal")
+    getElementById("modal-message").textContent = error.message
 
+  })
+})
 
 
 //------------------------------------------------------------------------------
